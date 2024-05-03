@@ -9,5 +9,7 @@ jobs:
         run: curl -LO https://github.com/owasp-dep-scan/depscan-bin/releases/latest/download/depscan-linux-amd64
       - name: confifurePermissions
         run: chmod +x depscan-linux-amd64
+      - name: listing
+        run: ls -la
       - name: runScan
         run: ./depscan-linux-amd64 --help
