@@ -1,15 +1,13 @@
 name: learn-github-actions
 on: push
 jobs:
-  dependencyTrackScanTest:
+  depScanTest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: installDT
-        run: curl -LO https://github.com/owasp-dep-scan/depscan-bin/releases/latest/download/depscan-linux-amd64
-      - name: confifurePermissions
-        run: chmod +x depscan-linux-amd64
+      - name: installDepScan
+        run: pip install owasp-depscan
       - name: listing
         run: ls -la
       - name: runScan
-        run: $PWD/depscan-linux-amd64 --src .
+        run: depscan --src $PWD --reports-dir $PWD/reports
