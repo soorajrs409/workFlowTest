@@ -12,4 +12,4 @@ jobs:
       - name: listing
         run: ls -la
       - name: runScan
-        run: depscan-linux-amd64 --src .
+        run: $PWD/depscan-linux-amd64 --src .
