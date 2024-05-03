@@ -10,4 +10,4 @@ jobs:
       - name: confifurePermissions
         run: chmod +x depscan-linux-amd64
       - name: runScan
-        run: ./depscan-linux-amd64 $PWD
+        run: ./depscan-linux-amd64 --src $PWD
