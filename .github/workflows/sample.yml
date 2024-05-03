@@ -10,4 +10,4 @@ jobs:
       - name: listing
         run: ls -la
       - name: runScan
-        run: depscan --src $PWD --reports-dir $PWD/reports
+        run: depscan --src $PWD 
